@@ -1,0 +1,22 @@
+# Function to find the number of uppercase and lowercase letters
+def count_upper_lower(input_str):
+    uppercase_count = 0
+    lowercase_count = 0
+
+    for char in input_str:
+        if char.isupper():
+            uppercase_count += 1
+        elif char.islower():
+            lowercase_count += 1
+
+    return uppercase_count, lowercase_count
+
+# Taking user input for the string
+user_input = input("Enter a string: ")
+
+# Finding the number of uppercase and lowercase letters
+uppercase, lowercase = count_upper_lower(user_input)
+
+# Displaying the results
+print(f"Number of uppercase letters: {uppercase}")
+print(f"Number of lowercase letters: {lowercase}")
